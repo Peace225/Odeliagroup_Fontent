@@ -1,12 +1,8 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import { MdWifiCalling3 } from "react-icons/md";
 import { IoMdMail } from "react-icons/io";
 import { IoLocation } from "react-icons/io5";
-import { FaFacebook } from "react-icons/fa";
-import { IoLogoInstagram } from "react-icons/io5";
-import { FaTiktok } from "react-icons/fa6";
-import { IoLogoWhatsapp } from "react-icons/io";
+
 
 const ContactUs = () => {
   const [name, setName] = useState('');
@@ -14,27 +10,22 @@ const ContactUs = () => {
   const [message, setMessage] = useState('');
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    try {
-      const response = await axios.post('http://localhost:5000/api/contacts', {
-        name,
-        email,
-        message,
-      });
-      console.log(response.data);
-      setSubmitted(true);
-      setName('');
-      setEmail('');
-      setMessage('');
-    } catch (error) {
-      console.error('Erreur lors de l\'envoi du formulaire:', error);
-    }
+    const whatsappNumber = '225719738096'; 
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+      `Nom: ${name}\nEmail: ${email}\nMessage: ${message}`
+    )}`;
+    window.open(whatsappUrl, '_blank');
+    setSubmitted(true);
+    setName('');
+    setEmail('');
+    setMessage('');
   };
 
   return (
     <div className='flex w-full min-h-screen justify-center items-center pt-24'>
-        <div className='flex flex-col md:flex-row md:space-x-6  space-y-6 md:space-y-0 bg-cyan-700 w-full max-w-4xl p-8 sm:p-12 rounded-xl shadow-lg text-white overflow-hidden'>
+        <div className='flex flex-col md:flex-row md:space-x-6 space-y-6 md:space-y-0 bg-cyan-700 w-full max-w-4xl p-8 sm:p-12 rounded-xl shadow-lg text-white overflow-hidden'>
             <div className='flex flex-col space-y-8 justify-between'>
                 <div>
                     <h1 className='font-bold text-4xl tracking-wide'>Contactez-Nous</h1>
@@ -91,7 +82,7 @@ const ContactUs = () => {
                               ></textarea>
                           </div>
                           <button type='submit' className='inline-block self-end bg-red-500 text-white font-bold rounded-lg px-6 py-2 uppercase text-sm'>
-                              Envoyer
+                              Envoyer via WhatsApp
                           </button>
                       </form>
                     )}
