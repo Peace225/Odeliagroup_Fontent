@@ -1,8 +1,8 @@
 import React from 'react'
 import CarsHouse from './CarsHouse';
 import Image1 from '../../images/Bonoua.png';
-import Image2 from '../../images/carousel1.jpg';
-import Image3 from '../../images/Bonoua.png';
+import Image2 from '../../images/Jacquiville.jpg';
+import Image3 from '../../images/Bonoua1.jpg';
 import Image4 from '../../images/Bonoua.png';
 import Image5 from '../../images/Bonoua.png';
 
@@ -13,42 +13,42 @@ const Offres = () => {
             id:0,
             img:Image1,
             name:"Bonoua",
-            price:"4.000.000 FCFA",
+            price:" 11.500.000 FCFA",
 
         },
         {
             id:1,
             img:Image2,
-            name:"Bonoua",
-            price:"4.000.000 FCFA",
+            name:"Jacqueville",
+            price:" 4.000.000 FCFA",
 
         },
         {
             id:2,
             img:Image3,
             name:"Bonoua",
-            price:"4.000.000 FCFA",
+            price:" 8.000.000 FCFA",
 
         },
         {
             id:3,
-            img:Image4,
-            name:"Bonoua",
-            price:"4.000.000 FCFA",
+            img:Image2,
+            name:"Jacqueville",
+            price:" 4.500.000 FCFA",
 
         },
         {
             id:4,
             img:Image5,
             name:"Bonoua",
-            price:"4.000.000 FCFA",
+            price:" 4.000.000 FCFA",
 
         },
         {
             id:5,
             img:Image3,
             name:"Bonoua",
-            price:"4.000.000 FCFA",
+            price:" 7.000.000 FCFA",
 
         },
     ];

@@ -1,5 +1,7 @@
 import React from 'react';
 import Image1 from '../../../images/Bonoua.png';
+import Image2 from '../../../images/Jacquiville.jpg';
+import Image3 from '../../../images/Bonoua1.jpg';
 import Slider from 'react-slick';
 import HouseNewsCard from './HouseNewsCard';
 
@@ -13,17 +15,17 @@ const HouseNews = () => {
         },
         {
             id:1,
-            img:Image1,
+            img:Image2,
             desc:'Terrains a vendre avec Arrêté Ministériel',
         },
         {
             id:2,
-            img:Image1,
+            img:Image3,
             desc:'Terrains a vendre avec Arrêté Ministériel',
         },
         {
             id:3,
-            img:Image1,
+            img:Image2,
             desc:'Terrains a vendre avec Arrêté Ministériel',
         },
     ];
@@ -68,7 +70,7 @@ const HouseNews = () => {
     <div className='container mt-14 mx-auto'>
         <h1 className='font-bold text-red-600 text-4xl text-center'>
             Nouvelles &<span className='text-primary'> Conseils sur les biens immobiliers</span></h1>
-        <p className='text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, velit.</p>
+        
         <div className='mt-8'>
             <Slider {...settings} >
                 {newsData.map((item)=>(

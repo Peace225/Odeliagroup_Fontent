@@ -4,10 +4,10 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import VenteMaison from './VenteMaison';
 import Image1 from '../../../images/Bonoua.png';
-import Image2 from '../../../images/carousel1.jpg';
-import Image3 from '../../../images/propriété1.jpg';
-import Image4 from '../../../images/vente.jpg';
-import Image5 from '../../../images/propriété2.jpeg';
+import Image2 from '../../../images/Arnaque.jpg';
+import Image3 from '../../../images/Jacquiville.jpg';
+import Image4 from '../../../images/contentieux.3.jpg';
+import Image5 from '../../../images/Bonoua1.jpg';
 
 const Vente = () => {
 
@@ -15,43 +15,37 @@ const Vente = () => {
         {
             id:0,
             img:Image1,
-            name:"Bonoua",
-            price:"4.000.000 FCFA",
+           
 
         },
         {
             id:1,
             img:Image2,
-            name:"Bonoua",
-            price:"4.000.000 FCFA",
+           
 
         },
         {
             id:2,
             img:Image3,
-            name:"Bonoua",
-            price:"4.000.000 FCFA",
+           
 
         },
         {
             id:3,
             img:Image4,
-            name:"Bonoua",
-            price:"4.000.000 FCFA",
+           
 
         },
         {
             id:4,
             img:Image5,
-            name:"Bonoua",
-            price:"4.000.000 FCFA",
+           
 
         },
         {
             id:5,
             img:Image3,
-            name:"Bonoua",
-            price:"4.000.000 FCFA",
+            
 
         },
     ];
@@ -93,11 +87,11 @@ const Vente = () => {
         ],
     };
   return (
-    <div className='container mt-14'>
+    <div className='container mt-14 mx-auto'>
         <h1 className='font-bold text-4xl text-center'>
-            En vedette <span className='text-primary'>Terrains</span>
+            Nos <span className='text-primary'>Actualités</span>
         </h1>
-        <p className='text-center'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem, quos</p>
+        
 
         <div className='mt-8'>
             <Slider {...settings}>
