@@ -11,105 +11,102 @@ import Image5 from '../../../images/Bonoua1.jpg';
 
 const Vente = () => {
 
-    const houseData=[
+    const houseData = [
         {
-            id:0,
-            img:Image1,
-           
-
+            id: 0,
+            img: Image1,
+            name: "Terrain à Bonoua",
+            price: "500 000 CFA"
         },
         {
-            id:1,
-            img:Image2,
-           
-
+            id: 1,
+            img: Image2,
+            name: "Terrain à Abidjan",
+            price: "1 200 000 CFA"
         },
         {
-            id:2,
-            img:Image3,
-           
-
+            id: 2,
+            img: Image3,
+            name: "Terrain à JacquiVille",
+            price: "800 000 CFA"
         },
         {
-            id:3,
-            img:Image4,
-           
-
+            id: 3,
+            img: Image4,
+            name: "Terrainà Cocody",
+            price: "750 000 CFA"
         },
         {
-            id:4,
-            img:Image5,
-           
-
+            id: 4,
+            img: Image5,
+            name: "Terrain à Abidjan",
+            price: "300 000 CFA"
         },
         {
-            id:5,
-            img:Image3,
-            
-
+            id: 5,
+            img: Image3,
+            name: "Terrain à Yopougon",
+            price: "600 000 CFA"
         },
     ];
-    const  settings ={
-        dots:false,
-        infinite:true,
-        slidesToShow:3,
-        slidesToScroll:1,
-        autoplay:true,
-        speed:2000,
-        cssEase:"linear",
-        arrows:false,
-        responsive:[
+
+    const settings = {
+        dots: false,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        speed: 2000,
+        cssEase: "linear",
+        arrows: false,
+        responsive: [
             {
-                breakpoint:1023,
-                settings:{
-                    slidesToShow:3,
-                    slidesToScroll:3,
+                breakpoint: 1023,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
                     infinite: true,
                     dots: true,
                 },
             },
             {
-                breakpoint:768,
-                settings:{
-                    slidesToShow:2,
-                    slidesToScroll:2,
-                    initialSlide:2
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    initialSlide: 2,
                 },
             },
             {
-                breakpoint:480,
-                settings:{
-                    slidesToShow:1,
-                    slidesToScroll:1,
-                    initialSlide:2
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    initialSlide: 2,
                 },
             },
         ],
     };
-  return (
-    <div className='container mt-14 mx-auto'>
-        <h1 className='font-bold text-4xl text-center'>
-            Nos <span className='text-primary'>Actualités</span>
-        </h1>
-        
 
-        <div className='mt-8'>
-            <Slider {...settings}>
-                {houseData.map((item)=>(
-                    <VenteMaison
-                    key={item.id}
-                    img={item.img}
-                    name={item.name}
-                    price={item.price}
-                    />
-                )
-                   
-                )}
-
-            </Slider>
+    return (
+        <div className='container mt-14 mx-auto'>
+            <h1 className='font-bold text-4xl text-center'>
+                Nos <span className='text-primary'>Actualités</span>
+            </h1>
+            <div className='mt-8'>
+                <Slider {...settings}>
+                    {houseData.map((item) => (
+                        <VenteMaison
+                            key={item.id}
+                            img={item.img}
+                            name={item.name}
+                            price={item.price}
+                        />
+                    ))}
+                </Slider>
+            </div>
         </div>
-    </div>
-  )
+    );
 }
 
-export default Vente
+export default Vente;

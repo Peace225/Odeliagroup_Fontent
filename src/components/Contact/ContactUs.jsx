@@ -3,24 +3,33 @@ import { MdWifiCalling3 } from "react-icons/md";
 import { IoMdMail } from "react-icons/io";
 import { IoLocation } from "react-icons/io5";
 
-
 const ContactUs = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
+    // Validation des champs
+    if (!name || !email || !message) {
+      setError("Tous les champs sont obligatoires.");
+      return;
+    }
+
     const whatsappNumber = '225719738096'; 
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
       `Nom: ${name}\nEmail: ${email}\nMessage: ${message}`
     )}`;
+    
     window.open(whatsappUrl, '_blank');
     setSubmitted(true);
     setName('');
     setEmail('');
     setMessage('');
+    setError('');
   };
 
   return (
@@ -51,6 +60,7 @@ const ContactUs = () => {
                       <p className='text-green-600'>Merci pour votre message ! Nous vous contacterons bientôt.</p>
                     ) : (
                       <form onSubmit={handleSubmit} className='flex flex-col space-y-4'>
+                          {error && <p className='text-red-500'>{error}</p>}
                           <div>
                               <label className='text-sm'>Votre Nom</label>
                               <input 

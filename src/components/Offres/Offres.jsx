@@ -55,16 +55,15 @@ const Offres = () => {
   return (
     <div className='container pt-24 mx-auto'>
         <div>
-            <h1 className='font-bold text-4xl text-center'>Nos <pan className='text-primary'> Offres</pan></h1>
+            <h1 className='font-bold text-4xl text-center'>Nos <span className='text-primary'>Offres</span></h1>
         </div>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-5'>
-            {houseData.map((item)=>(
-                <div>
+            {houseData.map((item) => (
+                <div key={item.id}>
                     <CarsHouse
-                    key={item.id}
-                    img={item.img}
-                    name={item.name}
-                    price={item.price}
+                        img={item.img}
+                        name={item.name}
+                        price={item.price}
                     />
                 </div>
             ))}
@@ -73,4 +72,4 @@ const Offres = () => {
   )
 }
 
-export default Offres
+export default Offres;

@@ -8,7 +8,8 @@ const VenteMaison = ({id, img, name, price}) => {
             <img src={img} alt='img' className='rounded-t-xl w-full' />
         </div>
         <div className='flex flex-col justify-center items-center'>
-            <h1 className='font-semibold text-xl text-primary pt-2'>{name} </h1>
+            <h1 className='font-semibold text-xl text-white pt-2'>{name} </h1>
+            <p className="font-medium text-lg text-red-500">{price}</p>
             <div className='flex gap-10 pt-2'>
                 
             </div>
@@ -18,3 +19,5 @@ const VenteMaison = ({id, img, name, price}) => {
 }
 
 export default VenteMaison
+
+   

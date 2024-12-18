@@ -10,15 +10,28 @@ import Footer from '../components/Footer';
 const Accueil = () => {
   return (
     <>
-    <Navbar/>
-    <Hero/>
-    <Vente/>
-    <Nous/>
-    <Mission/>
-    <HouseNews/>
-    <Footer/>
+      {/* Navbar - Navigation du site */}
+      <Navbar />
+      
+      {/* Hero - Section principale avec des visuels accrocheurs */}
+      <Hero />
+      
+      {/* Vente - Section pour les informations liées aux ventes */}
+      <Vente />
+      
+      {/* Nous - Section sur l'entreprise ou l'équipe */}
+      <Nous />
+      
+      {/* Mission - Détails sur la mission de l'entreprise */}
+      <Mission />
+      
+      {/* HouseNews - Actualités et mises à jour liées à l'immobilier */}
+      <HouseNews />
+      
+      {/* Footer - Pied de page */}
+      <Footer />
     </>
-  )
-}
+  );
+};
 
-export default Accueil
+export default Accueil;

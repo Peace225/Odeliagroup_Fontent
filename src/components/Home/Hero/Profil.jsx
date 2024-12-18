@@ -1,12 +1,15 @@
-import React from 'react'
+import React from 'react';
 
-const Profil = ({id, img}) => {
+const Profil = ({ id, img }) => {
   return (
-    <div >
-    <img src={img} alt='img'/>
-    
-</div>
-  )
-}
+    <div className="w-full h-full">
+      <img
+        src={img}
+        alt={`Image ${id}`}
+        className="w-full h-96 object-cover rounded-lg" // Taille ajustée avec h-80 pour une hauteur plus grande
+      />
+    </div>
+  );
+};
 
-export default Profil
+export default Profil;

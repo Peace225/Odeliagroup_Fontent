@@ -1,13 +1,13 @@
 import React from 'react';
-import {SiWebmoney} from 'react-icons/si';
-import {FaUsers, FaShippingFast} from 'react-icons/fa';
+import { SiWebmoney } from 'react-icons/si';
+import { FaUsers, FaShippingFast } from 'react-icons/fa';
 import NousHouse from './NousHouse';
 
 const Nous = () => {
-    const icon1 =<SiWebmoney className='text-red-500 mx-auto'size={48} />
-    const icon2 =<FaUsers className='text-red-500 mx-auto'size={48} />
-    const icon3 =<FaShippingFast className='text-red-500 mx-auto' size={48}/>
-    
+  const icon1 = <SiWebmoney className='text-red-500 mx-auto' size={48} aria-label="Option de Financement" />;
+  const icon2 = <FaUsers className='text-red-500 mx-auto' size={48} aria-label="Clients Satisfaits" />;
+  const icon3 = <FaShippingFast className='text-red-500 mx-auto' size={48} aria-label="Réservation Rapide & Facile" />;
+  
   return (
     <div className='flex flex-col justify-center container md:mt-16 py-10 mx-auto'>
         <h1 className='font-bold text-4xl text-center'>
@@ -20,7 +20,7 @@ const Nous = () => {
             <NousHouse icon={icon3} title="Réservation Rapide & Facile"/>
         </div>
     </div>
-  )
+  );
 }
 
-export default Nous
+export default Nous;

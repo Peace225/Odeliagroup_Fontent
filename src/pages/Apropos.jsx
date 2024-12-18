@@ -1,18 +1,25 @@
-import React from 'react'
-import Navbar from '../components/Navbar'
-import AproposUs from '../components/Apropos/AproposUs'
-import Approch from '../components/Apropos/Approch'
-import Footer from '../components/Footer'
+import React from 'react';
+import Navbar from '../components/Navbar';   // Importation de la barre de navigation
+import AproposUs from '../components/Apropos/AproposUs';   // Section sur "À propos de nous"
+import Approch from '../components/Apropos/Approch';   // Section expliquant l'approche de l'entreprise
+import Footer from '../components/Footer';   // Importation du pied de page
 
 const Apropos = () => {
   return (
     <>
-    <Navbar/>
-    <AproposUs/>
-    <Approch/>
-    <Footer/>
+      {/* Affichage de la barre de navigation */}
+      <Navbar />
+      
+      {/* Section "À propos de nous" */}
+      <AproposUs />
+      
+      {/* Section "Notre approche" */}
+      <Approch />
+      
+      {/* Affichage du pied de page */}
+      <Footer />
     </>
-  )
-}
+  );
+};
 
-export default Apropos
+export default Apropos;
